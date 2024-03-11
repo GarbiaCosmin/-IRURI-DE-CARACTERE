@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<head>
+    <meta charset=utf-8>
+    <title>ȘIRURI DE CARACTERE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    background: url('b1.gif') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+div.a{background-color: #252525; position: fixed;
+      opacity: 0.25;
+      width: 100%; height: 100%;
+      left: 0px; right: 0px; top:0px;
+}
+div.b{  position: absolute;
+        width: 76%; height: 40%;
+        left: 12%; right: 12%; top: 25%;
+  background: #2525253f;
+  border-radius: 45px 45px 45px 0px;
+}
+div.b1{position: absolute;
+       width: 49%; height: 49%;
+       margin-left: 0%; margin-right: 51%; margin-top: 0%;
+       background-color: #252525d0;
+       border-radius: 45px 0px 0px 0px;
+}
+div.b2{position: absolute;
+       width: 49%; height: 49%;
+       margin-left: 0%; margin-right: 51%; bottom: 0%;
+       background-color: #252525c0;
+       border-radius: 0px 0px 0px 0px;
+}
+div.b3{position: absolute;
+       width: 50%; height: 100%;
+       margin-left: 50%; margin-right: 0%; bottom: 0%;
+       background-color: none;
+}
+div.d1{position: absolute;
+       width: 49%; height: 49%;
+       margin-left: 0%; margin-right: 51%; bottom: 51%;
+       background-color: #252525c0;
+}
+div.d2{position: absolute;
+       width: 49%; height: 49%;
+       margin-left: 0%; margin-right: 51%; bottom: 0%;
+       background-color: #252525c0;
+}
+div.d3{position: absolute;
+       width: 50%; height: 49%;
+       margin-left: 50%; margin-right: 0%; bottom: 0%;
+       background-color: #252525c0;
+       border-radius: 0px 0px 45px 0px;
+}
+div.d4{position: absolute;
+       width: 50%; height: 49%;
+       margin-left: 50%; margin-right: 0%; bottom: 51%;
+       background-color: #252525c0;
+       border-radius: 0px 45px 0px 0px;
+}
+h3{color: beige; font-size: 32px;  position: relative; font-family: arial;}
+h4{color: beige; font-size: 12px;  position: relative; font-family: arial;}
+@keyframes e2{
+  from {left: -16%;}
+  to {left: 0px;}
+}
+ul { position:absolute;
+  left:0%; right:0%; bottom: 0%;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(51, 51, 51, 0.500);
+}
+li { font-size: 16px;
+     font-size: 1.5vw;
+     font-family: arial;
+     float: right;
+   }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.tabcontent { position: absolute; top: 2%;
+left: 8%; right:8%; width: 84%;
+  display: none;
+  background: rgba(0,0,0,0.5);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  padding: 6px 12px;
+  border-radius: 45px 45px 45px 45px;
+  animation-name: example;
+  animation-duration: 1s;
+}
+@keyframes example {
+  from {background-color: black; width:60%; left: 20%; right:20%;}
+  to {background-color: auto;}
+}
+p{color: beige; font-size: 22px; position: relative; font-family: arial; margin-left:20px;}
+div.ac{position: fixed;
+ right: 0px; top: 39%;
+}
+pre.code_cpp {
+    position: relative;
+}
+pre.code_cpp::after {
+    content: "C++";
+    font-style: italic;
+    color: #333;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+pre {
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: #333;
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+</style>
+<body>
+    <div class="a"></div>
+    <div class="b">
+        <div class="b1">
+            <h3 style="text-align:center; margin-top: 6%; margin-right: 5px; font-size: 2.5vw;">ȘIRURI DE<br>CARACTERE</h3>
+        </div>
+        <div class="b2">
+           <p style="text-align: center; margin-top: 4%; margin-right: 2%;animation-name: e2; animation-duration: 1s; animation-fill-mode: forwards; font-size:1.2vw; font-family:Lucida Handwriting;">
+              Gârbia Cosmin  -  clasa a XII-a D - Colegiul Național de Infomatică Piatra Neamț - 2022
+            </p>
+            <ul>
+               <li><a href="https://www.pbinfo.ro/">PBINFO</a></li>
+            </ul>
+        </div>
+        <div class="b3">
+            <div class="d1">
+                <button class="tablinks" onclick="openCity(event, 'metan1')" button style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0);
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 28px;
+                font-size: 2vw;
+                cursor: pointer;
+                "><b>NOȚIUNI TEORETICE</b></button>
+            </div>
+            <div class="d2">
+                <button class="tablinks" onclick="openCity(event, 'metan2')" button style="width: 100%; height: 100%; background-color: orange;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 28px;
+                font-size: 2vw;
+                cursor: pointer;
+                "><b>DIN SUBIECTELE DE BAC</b></button>
+            </div>
+            <div class="d3">
+                <button class="tablinks" onclick="openCity(event, 'metan3')" button style="width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0);
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 28px;
+                font-size: 2vw;
+                cursor: pointer;
+                "><b>Verifică-ți cunoștințele!</b></button>
+            </div>
+            <div class="d4">
+                <button class="tablinks" onclick="openCity(event, 'metan4')" button style="width: 100%; height: 100%; background-color: orange;
+                border: none;
+                color: white;
+                padding: 16px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 28px;
+                font-size: 2vw;
+                cursor: pointer;
+                "><b>EXEMPLE DE PROBLEME</b></button>
+            </div>
+        </div>
+    </div>
+    <div class="ac">
+     <a href="siruri.html">
+        <button style="border: none;
+        color: orange;
+        padding: 20px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 30px;
+        margin: 0px 0px;
+        cursor: pointer; background-color: #252525c0;"
+        >
+        <b>X</b></button>
+     </a>
+    </div>
+
+<div id="metan1" class="tabcontent">
+        <h3 style="color:orange;">Codul ASCII</h3>
+        <p>&nbsp; &nbsp; &nbsp; În orice sistem de calcul, datele – de orice tip – se memorează sub formă de numere. Mai mult, acestea se reprezintă în baza 2. În consecință, pentru a memora în calculator caractere este necesară utilizarea unei reprezentări a caracterelor prin numere. O astfel de reprezentare este Codul ASCII.
+<br>
+    <br>&nbsp; &nbsp; &nbsp; <b style="color:orange;">Introducere</b> ASCII este o formă de reprezentare în calculator a caracterelor folosită în toate limbajele de programare studiate în liceu, alături eventual de alte reprezentări.
+<br>
+  <br>&nbsp; &nbsp; &nbsp; Codul ASCII standard codifică caracterele folosind 7 biți, astfel că permite codificarea a 2^7=128 caractere. Nu sunt prea multe! De fapt sunt codificate numai literele din alfabetul englez, cifrele de la 0 la 9, semnele de punctuație și operatorii, precum și alte simboluri. Lipsesc cu desăvârșire literele specifice altor alfabete latine (așa numite litere cu diacritice, precum ar fi ă Ă î Î â Â ș Ș ț Ț ş Ş Ţ ţ (observăm că sunt două feluri de Ș și doua feluri de Ţ, dar despre acest fapt vom discuta în alt articol ), precum și literele din alte alfabete: chirilic, ebraic, arab, chinez, etc. Pentru memorarea acestor litere se poate folosi codul ASCII Extins, sau codul UNICODE.
+
+<br>&nbsp; &nbsp; &nbsp; Prin codul ASCII, fiecărui caractere reprezentat în acest cod i se asociază un număr. Aceste numere (numite chiar coduri ASCII) se găsesc în intervalul 0 .. 127. Caracterele ASCII se împart în două categorii:
+
+<br>&nbsp; &nbsp; &nbsp;&bull; caractere imprimabile – cele cu codurile ASCII în intervalul 32 126, inclusiv capetele: aici se regăsesc toate caracterele care au o reprezentare grafică bine determinată:
+<br>&nbsp; &nbsp; &nbsp;&bull; literele mari: A ... Z,
+<br>&nbsp; &nbsp; &nbsp;&bull; literele mici: a ... z,
+<br>&nbsp; &nbsp; &nbsp;&bull; cifrele 0 .. 9,
+<br>&nbsp; &nbsp; &nbsp;&bull; semnele de punctuaţie .,:;!?'"
+<br>&nbsp; &nbsp; &nbsp;&bull; caractere ce reprezintă operaţii aritmetice sau de alt tip: + - / * <> = (){}[]
+<br>&nbsp; &nbsp; &nbsp;&bull; alte caractere: ~`@#$%^&_\|
+<br>&nbsp; &nbsp; &nbsp;&bull; caracterul spaţiu
+<br>&nbsp; &nbsp; &nbsp;&bull; caracterele neimprimabile, sau de control – cu codurile 0 .. 31 și 127. Ele erau folosit mai demult pentru a controla transmiterea datelor. Caracterele neimprimabile nu au o reprezentare grafică bine determinată – în funcţie de sistemul operare folosit, reprezentările grafice ale acestor caractere pot fi foarte diferite, sau chiar să lipsească cu totul. Dintre aceste caractere amintim două, de o importanţă mai mare în limbajele de programare studiate:
+<br>&nbsp; &nbsp; &nbsp;&bull; caracterul cu codul 0, numit și caracter nul, notat în C++ cu '\0' – reprezintă finalul unui șir de caractere în memorie
+<br>&nbsp; &nbsp; &nbsp;&bull; caracterul cu codul 10, numit Line Feed, notat în C++ cu '\n' – produce trecerea la rând nou atunci când este afișat pe ecran sau într-un fișier.
+<br>
+<br>&nbsp; &nbsp; &nbsp; <b style="color:orange;">Observaţii utile</b>
+<br>&nbsp; &nbsp; &nbsp;&bull; literele mari și literele mici sunt diferite – au coduri ASCII diferite
+<br>&nbsp; &nbsp; &nbsp;&bull; codurile ASCII ale literelor mari (sau mici) sunt în ordine: 'A' are codul 65, 'B' are codul 66,.., 'Z' are codul 90. Două caractere consecutive în alfabet au coduri ASCII consecutive! De asemenea, litera 'a' are codul 97, etc.
+<br>&nbsp; &nbsp; &nbsp;&bull; codurile ASCII ale literelor mici sunt mai mari decât codurile ASCII ale literelor mari ('a' > 'Z') și diferenţă între codurile ASCII a două litere (mică – mare) este 32.
+<br>&nbsp; &nbsp; &nbsp;&bull; cifrele au coduri consecutive: caracterul '0' are codul 48, caracterul '1' are codul 49, etc. *Observăm că caracterul '0' nu are codul ASCII 0, ci 48.
+<br>&nbsp; &nbsp; &nbsp;&bull; caracterul spaţiu este un caracter imprimabil. Spațiul are codul ASCII 32.
+</p>
+        <p style="text-align: center;">
+        <img src="http://www.tomoniu.ro/ascii.files/image003.jpg"width="480px">
+          </p>
+    <h3 style="color:orange;">Șiruri de caractere</h3>
+    <p>
+    <br>&nbsp; &nbsp; &nbsp; În C++ există mai multe modalități de a reprezenta șirurile de caractere. În acest articol vom discuta despre șirurile de caractere reprezentate ca tablouri unidimensionale cu elemente de tip char, reprezentare care provine din limbajul C.
+<br>
+<br>&nbsp; &nbsp; &nbsp; Aceste șiruri se mai numesc null-terminated byte string (NTBS). În reprezentarea internă, după ultimul caracter (byte, octet) valid din șir se află caracterul '\0' – caracterul cu codul ASCII 0, numit și caracter nul.
+<br>
+<br>&nbsp; &nbsp; &nbsp;  Astfel, pentru reprezentarea în C/C++ a cuvântului copil, care are 5 caractere, se vor folosi 6 octeți, cu valorile: 'c', 'o', 'p', 'i', 'l', '\0'.
+</p>
+  <h3 style="color:orange;">Declararea unui șir de caractere</h3>
+
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[11];
+</pre>
+  <h3 style="color:orange;">Citirea unui șir de caractere</h3>
+  <pre class="code_c" style="width: 90%;font-size: 1vw; margin-left:20px;">cin >> s; //În acest mod, datorită specificului operatorului >> nu sepot citi șiruri care conțin spații – se vor citi caracterele
+până la primul spațiu, fără acesta.
+
+cin.getline(s , 11); //Am putea spune că getline citește toată linia și sare peste ENTER</pre>
+<br>
+<br>
+  <h3 style="color:orange;">Funcții pentru șiruri de caractere</h3>
+  <h3 style="color:coral;">strlen</h3>
+  <pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">std::size_t strlen( const char* str );  </pre>
+  <p>
+  Returnează lungimea șirului str, adică numărul de caractere din șirul al cărui prim caracter se află la adresa memorată în str. Caracterul nul nu se numără.
+</p>
+<pre class="code_c" style="width: 50%; font-size: 1vw; margin-left:20px;">cout << strlen("pbinfo"); // 6
+char s[10]="copil";
+cout << strlen(s); // 5
+cout << strlen(s + 2); //3 </pre>
+
+  <h3 style="color:coral; text-align: left;">strcpy</h3>
+  <pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char* strcpy( char* dest, const char* src );  </pre>
+  <p>
+    Copiază caracterele din șirul aflat la adresa src, inclusiv caracterul nul, în șirul al cărui prim element se află la adresa din dest.
+</p>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[21], t[21] = "copil";
+strcpy(s , "pbinfo");
+cout << s; // pbinfo
+strcpy(s , t);
+cout << s; // copil
+strcpy(s , t + 2);
+cout << s; // pil
+strcpy(s + 2 , t);
+cout << s; // picopil  </pre>
+
+  <h3 style="color:coral; text-align: left;">strncpy</h3>
+  <pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char *strncpy( char *dest, const char *src, std::size_t count );  </pre>
+  <p>
+    Copiază cel mult count caractere din șirul aflat la adresa src, în șirul al cărui prim element se află la adresa din dest.
+    În șirul dest nu se va plasa caracterul nul după cele count caractere copiate.
+    Funcția returnează adresa dest.
+</p>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[100]="abcdefghjkl";
+strncpy(s, "poveste", 3);
+cout << s; // povdefghjkl </pre>
+<h3 style="color:coral; text-align: left;">strcat</h3>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char *strcat( char *dest, const char *src );  </pre>
+<p>
+  Adaugă (concatenează) caracterele din șirul aflat la adresa src, inclusiv caracterul nul, la șirul al cărui prim element se află la adresa din dest.
+  Funcția returnează adresa dest.
+</p>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[21]="pbinfo", t[21] = "copil";
+strcat(s , t);
+cout << s; // pbinfocopil
+strcat(s , t + 2);
+cout << s; // pbinfocopilpil</pre>
+<h3 style="color:coral; text-align: left;">strchrt</h3>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char *strchr( char * str, char ch );  </pre>
+<p>
+  Caută caracterul ch în șirul al cărui prim caracter se află în memorie la adresa din str.
+  Funcția returnează adresa NULL, dacă caracterul ch nu apare în șirul str, respectiva adresa primei apariții al lui ch în str, dacă ch apare în str.
+</p>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[21]="pbinfo";
+char * p = strchr(s , 'i');
+cout << p; // info
+_______________________________
+char ch = 'i';
+if(strchr("aeiou" , ch) != NULL)
+  cout << "DA"
+else
+  cout << "NU";
+//se va afisa DA</pre>
+<h3 style="color:coral; text-align: left;">strstr</h3>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char *strstr( char * s, char * t );  </pre>
+<p>
+
+  Caută șirul t în șirul al cărui prim caracter se află în memorie la adresa din s.
+  Funcția returnează adresa NULL, dacă șirul t nu apare în șirul s, respectiva adresa primei apariții al lui t în s, dacă t apare în s.
+</p>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[21]="pbinfo";
+char * p = strstr(s , "inf");
+cout << p; // info</pre>
+<h3 style="color:coral; text-align: left;">strcmp</h3>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">int strcmp( char * s, char * t );  </pre>
+<p>
+  Compară lexicografic cele două șiruri de caractere:
+<br>
+  - dacă șirul s este lexicografi mai mic decât t funcția va returna o valoare negativă
+<br>
+  - dacă șirul s este lexicografi mai mare decât t funcția va returna o valoare pozitivă
+<br>
+  - dacă cele două șiruri sunt identice funcția va returna valoarea 0
+<br>
+  Standardul C/C++ stabilește doar semnul rezultatului, nu și valoarea acestuia. Valorile returnate pot fi, dar nu trebuie să fie, -1 0 1.
+</p>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[21]="abur", t[21]="abecedar";
+if(strcmp(s , t) < 0)
+  cout << "Da"
+else
+  cout << "Nu";
+// se va afisa Nu; cuvantul "abur" este lexicografic dupa "abecedar"</pre>
+<h3 style="color:coral; text-align: left;">strtok</h3>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char *strtok( char *str, const char *sep ); </pre>
+<p>
+  Funcția strtok extrage dintr-un sir de caractere câte un subșir (cuvânt) delimitat de caractere din șirul sep. Funcția se apelează în două moduri:
+<br>
+- primul apel are ca parametri șirul din care se face extragerea și șirul separatorilor
+<br>
+- la următoarele apeluri primul parametru este NULL.
+<br>
+Rezultatul funcției strtok este adresa de început a subșirului curent extras, sau NULL dacă nu se mai poate extrage niciun subșir din șirul dat.
+<br>Șirul din care se face extragerea se modifică în urma apelurilor. Dacă este nevoie de el mai târziu trebuie să-i facem o copie.
+<br>Secvența de mai jos extrage dintr-un șir s cuvintele (separate prin caractere din mulțimea {' ', ',', '.'}) și le afișează pe linii diferite. Șirul s se presupune declarat și citit.
+</p>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char sep[]=" .,";
+char * p = strtok(s , sep);
+while(p != NULL)
+{
+    cout << p << endl;
+    p = strtok(NULL , sep);
+}</pre>
+<h3 style="color:orange; text-align: left;">Eliminarea și inserarea unui caracter într-un șir</h3>
+
+<p>
+Acestea sunt operații frecvente și pot fi realizate cu ajutorul funcției strcpy. Deoarece comportamentul funcției strcpy este impredictibil dacă parametri se suprapun, este necesară utilizarea unui șir suplimentar.</p>
+<h3 style="color:orange; text-align: left;">Eliminarea unui caracter dintr-un șir</h3>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[256], t[256];
+int x;
+// ...
+//eliminarea
+strcpy(t , s + x + 1);
+strcpy(s + x , t);</pre>
+<h3 style="color:orange; text-align: left;">Inserarea unui caracter într-un șir</h3>
+<pre class="code_c" style="width: 50%;font-size: 1vw; margin-left:20px;">char s[256], t[256];
+int x;
+// ...
+//inserarea
+strcpy(t , s + x);
+strcpy(s + x + 1 , t);
+s[x] = 'A'; // echivalent, *(s+x) = 'A';</pre>
+<h3 style="color:orange; text-align: center;">Alte explicații</h3>
+<p style="text-align: center;">
+<iframe width="322" height="181" src="https://www.youtube.com/embed/bmLoZMT47R4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="322" height="181" src="https://www.youtube.com/embed/p84Ilb15FlY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</p>
+</div>
+<div id="metan2" class="tabcontent">
+  <h3 style="color:orange;">Probleme cu șiruri de caractere din subiectele de bacalaureat</h3>
+<h3 style="color:orange;">&nbsp; &nbsp;2016</h3>
+<p>
+ <br>&nbsp; &nbsp; &nbsp;4. În secvenţa de instrucțiuni de mai jos variabilele s1 și s2 memorează câte un şir cu cel mult 20 de caractere. Scrieţi ce se afişează pe ecran în urma executării secvenţei.
+ <br>
+ <br>&nbsp; &nbsp; &nbsp;strcpy(s1,”informatica”);
+ <br>&nbsp; &nbsp; &nbsp;cout<< strlen(s1); printf(”%d”,strlen(s1));
+ <br>&nbsp; &nbsp; &nbsp;strcpy(s2,”mate”);
+ <br>&nbsp; &nbsp; &nbsp;strcat(s2,strstr(s1,”ma “));
+ <br>&nbsp; &nbsp; &nbsp;cout<< s2; | printf(”%s”,s2);
+<br>
+<br>&nbsp; &nbsp; &nbsp; Răspunsul este:
+<br>
+<br>&nbsp; &nbsp; &nbsp; 11 // “informatica” are 11 litere
+<br>&nbsp; &nbsp; &nbsp; matematica // concatenează s2=mate cu strstr(s1,”ma “), adică cu matica.
+</p>
+<p style="text-align: center;">
+<img src="c2.png" width="720px">
+</p>
+<h3 style="color:orange;">&nbsp; &nbsp;2017</h3>
+<p>
+<br>&nbsp; &nbsp; &nbsp; Indicați șirul afișat pe ecran în urma executării instrucțiunii următoare:
+<br>&nbsp; &nbsp; &nbsp; cout<< strstr(”veni,vidi,vici”,”vi”); | printf(”%s”,strstr(”veni,vidi,vici”,”vi”));
+<br>
+<br>&nbsp; &nbsp; &nbsp; a. vidi
+<br>&nbsp; &nbsp; &nbsp; <b style="color:orange;">b. vidi,vici</b>
+<br>&nbsp; &nbsp; &nbsp; c. 2
+<br>&nbsp; &nbsp; &nbsp; d. 6
+</p>
+<h3 style="color:orange;">&nbsp; &nbsp;2018</h3>
+<p>
+<br>&nbsp; &nbsp; &nbsp; Fiind dat un cuvânt s, format numai din litere, și un cod c, de aceeași lungime cu s, format numai din cifre, numim codificare a lui s pe baza codului c operația de construire a unui nou șir, în care inițial se copiază prima literă din s, apoi, parcurgând de la stânga la dreapta restul șirului s, se adaugă litera curentă la începutul noului șir, dacă cifra corespunzătoare de pe aceeași poziție în c este pară, sau la finalul noului șir, în caz contrar.
+<br>
+<br>&nbsp; &nbsp; &nbsp; Exemplu: dacă șirul s este etalon, iar codul este 025843 se obține cuvântul oltean (inițial șirul conține litera e, apoi se adaugă, în ordinea parcurgerii lui s, literele t, l și o la început, iar restul literelor la final).
+<br>
+<br>&nbsp; &nbsp; &nbsp; Scrieţi un program C/C++ care citeşte de la tastatură două cuvinte, notate cu s și c, fiecare având cel mult 102 caractere, s fiind format doar din litere mici ale alfabetului englez, iar c fiind format doar din cifre. După primul cuvânt se tastează Enter. Programul construiește în memorie și afișează pe ecran cuvântul obținut prin codificarea lui s pe baza lui c, dacă cele două cuvinte au aceeași lungime, sau mesajul cod incorect, în caz contrar.
+<br>
+<br>&nbsp; &nbsp; &nbsp; Exemplu: dacă se citesc cuvintele alăturate, se afişează pe ecran cuvântul oltean
+</p>
+<img src="c3.png" width="48%" align="right">
+<pre class="code_cpp" style="width: 46%;font-size: 1vw; margin-left:20px;">#include < iostream>
+#include < cstring>
+using namespace std;
+int main()
+{
+    char s[101] , c[101] , r[101]="" , aux[101];
+    cin >> s >> c;
+    if(strlen(s) == strlen(c))
+    {
+        for(int i = 0 ; i < strlen(s) ; i++)
+            if(c[i] % 2 == 1) strncat(r , s+i , 1);
+        else
+        {
+            strcpy(aux , r);
+            r[0] = s[i];
+            r[1] = '\0';
+            strcat(r , aux);
+        }
+        cout << r;
+    }
+    else cout << "cod incorect";
+}
+  </pre>
+  <h3 style="color:orange;">&nbsp; &nbsp;2019</h3>
+  <p>
+    <br>&nbsp; &nbsp; &nbsp;Variabila x este de tip char şi memorează o literă mică a alfabetului englez. Indicați expresia C/C++ care are valoare nenulă dacă şi numai dacă litera memorată în variabila x este o vocală. Se consideră vocale literele a, e, i, o, u.
+    <br>
+    <br>&nbsp; &nbsp; &nbsp; a. strcmp(x,"aeiou")==0
+    <br>&nbsp; &nbsp; &nbsp; <b style="color:orange;">b. strchr("aeiou",x)</b>
+    <br>&nbsp; &nbsp; &nbsp; c. ’a’<=x && x<=’u’
+    <br>&nbsp; &nbsp; &nbsp; d. x==a || x==e || x==i || x==o || x==u
+
+    <h3 style="color:orange;">&nbsp; &nbsp;2020</h3>
+    <p>
+      <br>&nbsp; &nbsp; &nbsp;Numim rotire spre stânga a unui cuvânt format din cel puțin trei litere operația prin care prima sa literă se mută la final, iar toate celelalte litere se mută cu o poziție spre stânga.
+<br>
+<br>&nbsp; &nbsp; &nbsp;Exemplu: în urma rotirii spre stânga a cuvântului ilumina se obține cuvântul luminai.
+<br>
+<br>&nbsp; &nbsp; &nbsp;Un text are cel mult 100 de caractere, iar cuvintele sale sunt formate din litere mici ale alfabetului englez și sunt separate prin câte un spațiu. Scrieți un program C/C++ care citește de la tastatură un text de tipul menționat mai sus și îl transformă în memorie prin rotirea spre stânga a fiecărui cuvânt al său format din cel puțin trei litere, ca în exemplu. Programul afișează pe ecran textul obținut sau mesajul nu exista, dacă în text nu există niciun cuvânt de cel puțin trei litere.
+<br>
+<br>&nbsp; &nbsp; &nbsp;Exemplu: pentru textul <b style="color:orange;">un palc mic de scolarite ilumina sala</b>
+<br>&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;  se afișează pe ecran <b style="color:orange;"> un alcp icm de colarites luminai alas</b>
+    </p>
+    <img src="c4.png" width="48%" align="right">
+    <pre class="code_cpp" style="width: 46%;font-size: 1vw; margin-left:20px;">#include< iostream>
+#include< cstring>
+using namespace std;
+int main()
+{
+    char text[101], rezultat[101]="";
+    int ok=0;
+    cin.getline(text,101);
+    char *cuvant= strtok(text," ");
+    while(cuvant)
+    {
+        char cuvantaux[101], primaLit;
+        strcpy(cuvantaux,cuvant);
+        if(strlen(cuvantaux)>=3)
+        {
+            primaLit=cuvantaux[0];
+            for(int i=0; i<=strlen(cuvantaux); i++)
+                cuvantaux[i]=cuvantaux[i+1];
+            cuvantaux[strlen(cuvant)-1]= primaLit;
+            ok++;
+        }
+        strcat(rezultat,cuvantaux);
+        strcat(rezultat," ");
+        cuvant=strtok(NULL," ");
+
+    }
+    if(ok!= 0)
+        cout<< rezultat;
+    else
+        cout<<"NU EXISTA";
+    return 0;
+
+}
+      </pre>
+<h3 style="color:orange;">&nbsp; &nbsp;2021 Simulare</h3>
+<p>
+<br>&nbsp; &nbsp; &nbsp;Variabila i este de tip întreg, iar variabila s permite memorarea unui șir de cel mult 20 de caractere. Scrieți șirul accesat prin variabila s în urma executării secvenței alăturate.
+<br> <br>&nbsp; &nbsp; &nbsp; strcpy(s,"ELITIST");
+<br>&nbsp; &nbsp; &nbsp; for(i=2;i< 6;i++)
+<br>&nbsp; &nbsp; &nbsp; if(i%2==0) s[i]=s[0];
+<br>&nbsp; &nbsp; &nbsp; else s[i]=s[1]+i/2;
+<br>
+<br>&nbsp; &nbsp; &nbsp; Răspuns:<b style="color:orange;"> ELEMENT</b>
+<br>
+<br>&nbsp; &nbsp; &nbsp; Explicație:
+<br>&nbsp; &nbsp; &nbsp; 0 &nbsp;&nbsp;1 &nbsp;&nbsp;2 &nbsp;&nbsp;3 &nbsp;&nbsp;4 &nbsp;&nbsp;5 &nbsp;&nbsp;6
+<br>&nbsp; &nbsp; &nbsp; E &nbsp;&nbsp;L &nbsp;&nbsp;I &nbsp;&nbsp;&nbsp;T &nbsp;&nbsp;I &nbsp;&nbsp;S &nbsp;&nbsp;T
+<br>&nbsp; &nbsp; &nbsp; <b style="color:orange;">E &nbsp;&nbsp;L&nbsp;&nbsp;E &nbsp;&nbsp;M&nbsp;&nbsp;E&nbsp;&nbsp;N&nbsp;&nbsp;T </b>
+<br>&nbsp; &nbsp; &nbsp; // literele de pe poziții pare mai mici ca 6 devin E; celor de pe poziții impare li se adaugă i/2 în codul ASCII: L+1=M și L+2=N, iar T rămâne T pentru că este pe poziția 6
+<br>
+<p style="text-align: center;">
+<img src="c5.png" width="720px">
+</p>
+</div>
+
+<div id="metan3" class="tabcontent">
+<h3 style="color:orange;">Verifică-ți cunoștințele!</h3>
+<iframe src="test/siruri_de_caractere.html" width="100%" style="margin-bottom: 50px;" height="700px">
+
+</iframe>
+</div>
+
+<div id="metan4" class="tabcontent">
+<h3 style="color:orange;">Exemple de probleme</h3>
+ <p>
+<br>&nbsp; &nbsp; &nbsp; #3154 anagrame_pfv
+<br>
+<br>&nbsp; &nbsp; &nbsp; Cerința
+Se citește de la tastatură un cuvânt s format din cel mult 11 litere mici distincte. Să se genereze în ordine alfabetică și să se afișeze toate anagramele cuvântului s în care vocalele sunt puncte fixe.
+<br>
+<br>&nbsp; &nbsp; &nbsp;Date de intrare
+<br>&nbsp; &nbsp; &nbsp;Programul citește de la tastatură cuvântul s.
+<br>&nbsp; &nbsp; &nbsp;Date de ieșire
+<br>&nbsp; &nbsp; &nbsp;Programul va afișa pe ecran pe rânduri separate anagramele cuvântului citit în care vocalele rămân pe pozițiile inițiale.
+<br>
+<br>&nbsp; &nbsp; &nbsp;Restricții și precizări
+<br>&nbsp; &nbsp; &nbsp;cuvântul s are cel mult 11 caractere și este format din litere mici distincte
+<br>
+<br>&nbsp; &nbsp; &nbsp;Exemplu<br>
+<br>&nbsp; &nbsp; &nbsp;Intrare
+
+<br>&nbsp; &nbsp; &nbsp;dorel <br>
+<br>&nbsp; &nbsp; &nbsp;Ieșire
+
+<br>&nbsp; &nbsp; &nbsp;doler
+<br>&nbsp; &nbsp; &nbsp;dorel
+<br>&nbsp; &nbsp; &nbsp;loder
+<br>&nbsp; &nbsp; &nbsp;lored
+<br>&nbsp; &nbsp; &nbsp;rodel
+<br>&nbsp; &nbsp; &nbsp;roled<br>
+<br>&nbsp; &nbsp; &nbsp;Explicație
+<br>&nbsp; &nbsp; &nbsp;Anagramele sunt afișate în ordine lexicografică, iar literele o și e rămân pe pozițiile inițiale.
+</p>
+<img src="c1.png" width="48%" align="right">
+      <pre class="code_cpp" style="font-size: 1vw; width:48%; margin-left:20px;">#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+#include&lt;algorithm&gt;
+using namespace std;
+int x[20],n,fr[20];
+char voc[]=&quot;aeiou&quot;, sir[101];
+void afis(int k)
+{
+for(int i=0;i&lt;=k;i++)
+cout&lt;&lt;sir[x[i]];
+cout&lt;&lt;&#039;\n&#039;;
+}
+int verif(int k)
+{
+if(k==0||k==n-1)
+if(strchr(voc,sir[x[k]])==0) return 0;
+return 1;
+}
+void back(int k)
+{
+for(int i=0;i&lt;=n-1;i++)
+if(fr[i]==0)
+{
+x[k]=i; fr[i]=1;
+if (verif(k))
+if(k==n-1) afis(k);
+else back(k+1);
+fr[i]=0;
+}
+}
+int main()
+{
+cin&gt;&gt;sir;
+n=strlen(sir);
+sort(sir,sir+n);
+back(0);
+return 0;
+}</pre>
+<p>
+  <br>&nbsp; &nbsp; &nbsp; #2730 SC
+<br>
+<br>&nbsp; &nbsp; &nbsp; Cerința<br>
+Scrieți funcția recursivă având următorul antet:
+<br>&nbsp; &nbsp; &nbsp;
+int SC(char s[])<br> <br>&nbsp; &nbsp; &nbsp;
+Funcția primește ca parametru un șir de caractere și returnează suma tuturor cifrelor care apar în șir.<br>
+<br>&nbsp; &nbsp; &nbsp;
+Restricții și precizări
+1 ≤ lungimea șirului ≤ 200
+Dacă șirul nu conține cifre, funcția trebuie să returneze valoarea 0.
+Se recomandă utilizarea recursivității pentru rezolvarea acestei probleme.<br>
+<br>&nbsp; &nbsp; &nbsp;
+Exemplu<br>
+SC("Ana are 15 mere si 185 de pere.") va returna valoarea 20.
+</p>
+<pre class="code_cpp" style="font-size: 1vw; width:48%; margin-left:20px;">int SC(char s[])
+{
+    if (s[0] == 0) return 0;
+    if ('0' <= s[0] && s[0] <= '9') return (s[0]-'0') + SC(s + 1);
+    return SC(s + 1);
+}
+</pre>
+<p>
+  <br>&nbsp; &nbsp; &nbsp; #2295 Baza
+<br>
+<br>&nbsp; &nbsp; &nbsp; Cerința<br>
+Mirel a învățat astăzi la școală la ora de matematică despre baze de numerație. De exemplu a învățat cum să transforme un număr dintr-o bază oarecare în baza zece. Pentru acasă a primit următoarea temă:
+<br>&nbsp; &nbsp; &nbsp
+Pentru un cuvânt dat, se înlocuiește fiecare literă a acestuia cu numărul de litere de dinaintea sa în alfabet, astfel litera a devine 0, litera b devine 1, litera c devine 2 ș.a.m.d. , iar cuvântul dat devine un număr în baza 26.
+<br>&nbsp; &nbsp; &nbsp
+Să se transforme acest număr în baza zece.
+<br>&nbsp; &nbsp; &nbsp;
+<br>
+<br>&nbsp; &nbsp; &nbsp; Date de intrare
+<br>&nbsp; &nbsp; &nbsp; În fișierul baza.in se citește de pe prima linie un cuvânt, format doar din litere mici ale alfabetului englez.
+<br>
+<br>&nbsp; &nbsp; &nbsp; Date de ieșire
+<br>&nbsp; &nbsp; &nbsp; În fișierul baza.out se va afișa pe prima linie un număr, reprezentând valoarea in baza zece a cuvântului din baza 26.
+<br>
+<br>&nbsp; &nbsp; &nbsp; Restricții și precizări
+Lungimea cuvântului <= 50 <br>
+<br>&nbsp; &nbsp; &nbsp;
+Exemplu
+baza.in
+<br>&nbsp; &nbsp; &nbsp;
+abz
+baza.out
+<br>&nbsp; &nbsp; &nbsp;
+51
+<br>
+<br>&nbsp; &nbsp; &nbsp;Explicație
+a = 0, b = 1, z = 25.
+<br>
+abz (26) = 0 * 26 ^ 2 + 1 * 26 ^ 1 + 25 * 26 ^ 0 = 51 (10)
+</p>
+<pre class="code_cpp" style="font-size: 1vw; width:48%; margin-left:20px;">#include &lt;fstring&gt;
+#include &lt;cstring&gt;
+using namespace std;
+ifstream f(&quot;baza.in&quot;); ofstream g(&quot;baza.out&quot;);
+char x[1001];
+int y[1001];
+typedef int Mare[2001];
+Mare s;
+void prod(Mare M)
+{   int t=0;
+    for(int c, i=1; i&lt;=M[0]; ++i) {c=M[i]*26+t; t=c/10; M[i]=c%10;}
+    while(t) {M[++M[0]]=t%10; t/=10;}
+}
+void suma(Mare M, int v)
+{   int t=v;
+    for(int c, i=1; i&lt;=M[0]; ++i) {c=M[i]+t; t=c/10; M[i]=c%10;}
+    if(t) M[++M[0]]=t;
+}
+int main()
+{   f&gt;&gt;x;
+    int n=strlen(x);
+    for(int i=0; i&lt;n; ++i) y[i]=x[i]-&#039;a&#039;;
+    s[0]=1; s[1]=0;
+    for(int i=0; i&lt;n; ++i) {prod(s); suma(s, y[i]);}
+    for(int i=s[0]; i; --i) g&lt;&lt;s[i];
+    f.close(); g.close(); return 0;}</pre>
+
+    <p>
+      <br>&nbsp; &nbsp; &nbsp; #3374 caroiaj
+      <br>
+      <br>&nbsp; &nbsp; &nbsp; Se consideră un caroiaj format din n linii și n coloane, fiecare element din caroiaj fiind o literă mică din alfabetul englez. Să se constuiască șirul de caractere obținut prin parcurgerea caroiajului pe chenare dinspre exteriorul spre interiorul caroiajului, fiecare chenar fiind parcurs în sensul arcelor de ceas, pornind din colțul stânga sus al fiecărui chenar. Determinați cea mai lungă secvență de caractere situate pe poziții alăturate în șirul construit, care este simetrică. Dacă există mai multe astfel de secvențe de lungime maximă, se va determina ultima dintre ele.
+      <br>
+        <br>&nbsp; &nbsp; &nbsp; Cerința
+          <br>&nbsp; &nbsp; &nbsp; Cunoscând numărul natural n și un caroiaj format din n linii și n coloane de litere mici ale alfabetului englez, să se determine cea mai lungă secvență de caractere situate pe poziții alăturate în șirul construit, care este simetrică. Dacă există mai multe secvențe simetrice de lungime maximă, se va determina ultima dintre ele.
+        <br>
+          <br>&nbsp; &nbsp; &nbsp; Date de intrare
+            <br>&nbsp; &nbsp; &nbsp; Fișierul de intrare caroiaj.in conţine pe prima linie, numărul natural n,iar pe următoarele n linii se află câte n caractere, litere mici ale alfabetului englez.
+      <br>
+      <br>&nbsp; &nbsp; &nbsp; Date de ieșire
+      <br>&nbsp; &nbsp; &nbsp; Pe prima linie a fişierului caroiaj.out va fi scrisă ultima secvență simetrică de caractere, de lungime maximă din șirul format prin parcurgerea caroiajului de caractere pe chenare, dinspre exteriorul spre interiorul caroiajului, fiecare chenar fiind parcurs în sensul arcelor de ceas, pornind de la colțul din stânga sus al fiecărui chenar.
+      <br>
+      <br>&nbsp; &nbsp; &nbsp; Restricții și precizări
+        <br>&nbsp; &nbsp; &nbsp; 1 ≤ n ≤ 500
+<br>&nbsp; &nbsp; &nbsp; literele mici din caroiaj aparțin alfabetului englez
+<br>
+<br>&nbsp; &nbsp; &nbsp; Exemplul 1:
+<br>&nbsp; &nbsp; &nbsp; caroiaj.in
+
+<br>&nbsp; &nbsp; &nbsp; abcde
+<br>&nbsp; &nbsp; &nbsp; bceaf
+<br>&nbsp; &nbsp; &nbsp; abade
+<br>&nbsp; &nbsp; &nbsp; abbad
+<br>&nbsp; &nbsp; &nbsp; ffabc
+<br>
+<br>&nbsp; &nbsp; &nbsp; caroiaj.out
+<br>&nbsp; &nbsp; &nbsp; abcdefedcba
+<br>
+<br>&nbsp; &nbsp; &nbsp; Explicație
+<br>&nbsp; &nbsp; &nbsp; Șirul de caractere format la parcurgerea caroiajului pe chenare în maniera indicată în text, este: abcdefedcbaffaabceadabbba. Ultima secvență simetrică de lungime maximă este abcdefedcba.
+  <br>
+<br>&nbsp; &nbsp; &nbsp; Exemplul 2:
+<br>&nbsp; &nbsp; &nbsp; caroiaj.in
+
+<br>&nbsp; &nbsp; &nbsp; 3
+<br>&nbsp; &nbsp; &nbsp; abc
+<br>&nbsp; &nbsp; &nbsp; def
+<br>&nbsp; &nbsp; &nbsp; ghi
+<br>
+<br>&nbsp; &nbsp; &nbsp; caroiaj.out
+
+<br>&nbsp; &nbsp; &nbsp; e
+<br>
+<br>&nbsp; &nbsp; &nbsp; Explicație
+<br>&nbsp; &nbsp; &nbsp; Șirul de caractere format la parcurgerea caroiajului pe chenare în maniera indicată în text, este abcfihgde.
+Ultima secvență simetrică de lungime maximă este e.
+<pre class="code_cpp" style="font-size: 1vw; width:48%; margin-left:20px;">#include &lt;fstream&gt;
+using namespace std;
+ifstream f(&quot;caroiaj.in&quot;); ofstream g(&quot;caroiaj.out&quot;);
+char a[502][502], s[250006];
+int n;
+int main()
+{   f&gt;&gt;n;
+    for(int i=1; i&lt;=n; ++i)
+        for(int j=1; j&lt;=n; ++j) f&gt;&gt;a[i][j];
+    int nrt=n/2, lg=0;
+    for(int k=1; k&lt;=nrt; ++k)
+    {   for(int j=k; j&lt;=n-k; ++j) s[lg++]=a[k][j];
+        for(int i=k; i&lt;=n-k; ++i) s[lg++]=a[i][n-k+1];
+        for(int j=n-k+1; j&gt;k; --j) s[lg++]=a[n-k+1][j];
+        for(int i=n-k+1; i&gt;k; --i) s[lg++]=a[i][k];
+    }
+    if(n%2) s[lg++]=a[nrt+1][nrt+1]; s[lg]=&#039;1&#039;;
+    int lgMax=0, stMax, drMax;
+    for(int st, dr, i=1; i&lt;lg; ++i)
+    {   st=i-1, dr=i+1;
+        if(s[i]==s[i+1]) dr++;
+        while(s[st]==s[dr] &amp;&amp; st&gt;=0 &amp;&amp; dr&lt;lg) {st--; dr++;}
+        if(dr-1-st&gt;=lgMax) {lgMax=dr-1-st; stMax=st+1; drMax=dr-1;}
+    }
+    for(int i=stMax; i&lt;=drMax; ++i) g&lt;&lt;s[i];
+    f.close(); g.close(); return 0;
+}</pre>
+  </div>
+    <script>
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        </script>
+
+</body>
+</html>
